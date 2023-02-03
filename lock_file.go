@@ -41,7 +41,7 @@ func CreatePidFile(name string, perm os.FileMode) (lock *LockFile, err error) {
 // If successful, function returns LockFile for opened file.
 func OpenLockFile(name string, perm os.FileMode) (lock *LockFile, err error) {
 	var file *os.File
-	if file, err = os.OpenFile(name, os.O_RDWR|os.O_CREATE, perm); err == nil {
+	if file, err = os.OpenFile(name, os.O_RDWR|os.O_CREATE, 0644); err == nil {
 		lock = &LockFile{file}
 	}
 	return

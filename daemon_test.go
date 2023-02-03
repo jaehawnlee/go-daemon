@@ -29,7 +29,7 @@ func Example() {
 		PidFileName: "/var/run/daemon.pid",
 		PidFilePerm: 0644,
 		LogFileName: "/var/log/daemon.log",
-		LogFilePerm: 0640,
+		LogFilePerm: 0644,
 		WorkDir:     "/",
 		Umask:       027,
 	}
