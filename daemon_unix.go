@@ -154,6 +154,7 @@ func (d *Context) openFiles() (err error) {
 			os.O_WRONLY|os.O_CREATE|os.O_APPEND, d.LogFilePerm); err != nil {
 			return
 		}
+		fmt.Println(d.LogFilePerm)
 	}
 
 	d.rpipe, d.wpipe, err = os.Pipe()
