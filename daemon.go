@@ -14,7 +14,7 @@ const (
 )
 
 // Default file permissions for log and pid files.
-const FILE_PERM = os.FileMode(0640)
+const FILE_PERM = os.FileMode(0644)
 
 // WasReborn returns true in child process (daemon) and false in parent process.
 func WasReborn() bool {
