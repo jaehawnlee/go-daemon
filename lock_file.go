@@ -61,7 +61,7 @@ func (file *LockFile) Unlock() error {
 // If unable read from a file, returns error.
 func ReadPidFile(name string) (pid int, err error) {
 	var file *os.File
-	if file, err = os.OpenFile(name, os.O_RDONLY, 0640); err != nil {
+	if file, err = os.OpenFile(name, os.O_RDONLY, 0644); err != nil {
 		return
 	}
 	defer file.Close()
